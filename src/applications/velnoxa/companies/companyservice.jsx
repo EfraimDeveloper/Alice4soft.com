@@ -23,7 +23,7 @@ export async function getCompanyById(id){
     return await response.json();
 }
 
-export async function  createCompany(company){
+export async function createCompany(company){
     const response=await fetch(API_URL,{
         method:"Post",
         headers:{
@@ -32,7 +32,7 @@ export async function  createCompany(company){
     body:JSON.stringify(company)
 });
 
-if(response.ok){
+if(!response.ok){
     throw new Error("Error creating company");
 }
 return await response.json();

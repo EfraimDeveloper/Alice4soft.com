@@ -1,14 +1,17 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Companies from "../companies/companies";
+import { Routes, Route } from "react-router-dom";
 
-function Router() {
+import Login from "../users/Login";
+import Companies from "../companies/companies";
+import Dashboard from "../dashboard/Dashboard";
+
+function VelnoxaRouter() {
     return (
-        // <BrowserRouter>
-            <Routes>
-                <Route path="/companies" element={<Companies />} />
-            </Routes>
-        // </BrowserRouter>
+        <Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/companies" element={<Companies />} />
+            <Route path="/velnoxa/dashboard" element={<Dashboard />} />
+        </Routes>
     );
 }
 
-export default Router;
+export default VelnoxaRouter;

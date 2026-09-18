@@ -1,14 +1,20 @@
-import { Routes, Route } from "react-router-dom";
+import Navbar from '../../../components/layout/Navbar';
+import { Routes, Route  } from "react-router-dom";
 import Home from "../page/home";
-import Companies from "../../velnoxa/companies/companies";
+import { use } from 'react';
 
 function Router() {
+
+
     return (
+        <>
+        <Navbar/> 
+        
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/companies" element={<Companies />} />
         </Routes>
+        </>
     );
 }
 
